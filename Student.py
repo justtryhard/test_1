@@ -10,12 +10,12 @@ class Student(Human):
         self._class = _class
         if isinstance(_class, Class):
             self._class = _class
-            self._class._students.append(self)
+            self._class.append(self)
 
     def set_class(self, cl: Class):
         if isinstance(cl, Class):
             self._class = cl
-            cl._students.append(self)
+            cl.append(self)
         else:
             raise Exception("Данный экземляр класса не найден")
 
@@ -23,7 +23,7 @@ class Student(Human):
         return self._class
 
     def __str__(self):
-        return f'Ученик {self.name} {self.last_name}'
+        return f'Ученик {self.name} {self.last_name}, {self._class}'
 
     def __repr__(self):
         return f'{self.name} {self.last_name}'

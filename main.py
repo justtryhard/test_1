@@ -1,0 +1,47 @@
+from Class import Class
+from Human import Human
+from Student import Student
+from Teacher import Teacher
+from Subject import Subject
+
+Alex = Student("Alexey", "Chernobrov")
+Petr = Student("Petr", "Ivanov")
+print(Alex.get_class())
+Michail = Student("Michail", "Belov")
+Svyat = Student("Svyatoslav", "Chernobrov")
+Anton = Student("Anton", "Egorov")
+Aleksandr = Student("Aleksandr", "Chernov")
+Maksim = Student("Maksim", "Nikolaev")
+Dmitry = Student("Dmitriy", "Andreev")
+Tatiana = Teacher("Tatiana", "Ryabchikova", [Subject.LIT, Subject.ART, Subject.FOREIGN_LANG])
+Anna = Teacher("Anna", "Mikhailova", [Subject.MATH, Subject.PHYSICS])
+Victor = Teacher("Victor", "Alekseev", [Subject.CHEMICS])
+Class1 = Class(Tatiana, [Maksim, Aleksandr, Svyat, Dmitry])
+Class1.set_grade(10)
+Class1.set_letter("B")
+Andrey = Student("Andrey", "Petrov", Class1)
+Class2 = Class(Anna, [Petr, Michail, Anton])
+Class2.set_grade(7)
+Class2.set_letter("A")
+Alex.set_class(Class1)
+print(Alex.get_class())
+Tatiana.set_class(Class1)
+print(Tatiana.get_class())
+print(Class1[""])
+print(Class1["Ch"])
+print(Class2[2])
+print(Class1[2])
+print(Class1._students)
+Class3 = Class(Victor, [])
+for elem in Class1:
+    print(elem.name, elem.last_name)
+dl = Class1[2] < Class1[1]
+print(dl)
+Rick = Human("Richard", "Wesson")
+Rick1 = Human("Richard", "Wesson")
+print(Human.ids)
+print({hash(Tatiana): 3})
+Class1.append(Anton)
+print(Class1._students)
+Class1.write_csv()
+Class1.read_csv()

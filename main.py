@@ -1,8 +1,9 @@
-from Class import Class
-from Human import Human
-from Student import Student
-from Teacher import Teacher
-from Subject import Subject
+from objects import Student
+from objects import Teacher
+from objects import Class
+from objects import Subject
+from objects import Human
+
 
 #ниже создаём учеников и преподавателей
 Alex = Student("Alexey", "Chernobrov")

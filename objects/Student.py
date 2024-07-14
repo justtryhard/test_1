@@ -23,7 +23,7 @@ class Student(Human):
         return self._class
 
     def __str__(self):
-        return f'Ученик {self.name} {self.last_name}, {self._class}'
+        return f'{self.name} {self.last_name}'
 
     def __repr__(self):
         return f'{self.name} {self.last_name}'

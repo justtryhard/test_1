@@ -1,8 +1,9 @@
-from Class import Class
-from Human import Human
-from Student import Student
-from Teacher import Teacher
-from Subject import Subject
+from objects import Student
+from objects import Teacher
+from objects import Class
+from objects import Subject
+from objects import Human
+
 
 #ниже создаём учеников и преподавателей
 Alex = Student("Alexey", "Chernobrov")
@@ -20,7 +21,7 @@ Victor = Teacher("Victor", "Alekseev", [Subject.CHEMICS])
 Class1 = Class(Tatiana, [Maksim, Aleksandr, Svyat, Dmitry])
 print(Class1) #выведет класс 0, но уже с преподавателем
 Class1.set_grade(10)
-Class1.set_letter("B")
+Class1.set_letter("В")
 Andrey = Student("Andrey", "Petrov", Class1)
 Class2 = Class(Anna, [Petr, Michail, Anton])
 Class2.set_grade(7)

@@ -1,8 +1,4 @@
-from objects import Student
-from objects import Teacher
-from objects import Class
-from objects import Subject
-from objects import Human
+from objects import Student, Teacher, Class, Subject, Human
 import unittest
 
 

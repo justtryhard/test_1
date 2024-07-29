@@ -1,5 +1,4 @@
-from objects import Student, Teacher, Class, Subject, Human
-
+from objects import *
 
 #ниже создаём учеников и преподавателей
 Alex = Student("Alexey", "Chernobrov")

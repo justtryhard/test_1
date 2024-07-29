@@ -1,4 +1,4 @@
-from objects import Student, Teacher, Class, Subject, Human
+from objects import *
 import unittest
 
 

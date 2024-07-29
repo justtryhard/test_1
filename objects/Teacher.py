@@ -2,7 +2,7 @@ from .Class import Class
 from .Human import Human
 from typing import List
 from .Subject import Subject
-
+from .Student import Student
 
 class Teacher(Human):
     _homeroom_class: Class | None
